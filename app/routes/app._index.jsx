@@ -90,6 +90,8 @@ export default function Index() {
   const generateProduct = () => fetcher.submit({}, { method: "POST" });
 
   return (
+    <>
+    <h1>First Page</h1>
     <s-page heading="Shopify app template">
       <s-button slot="primary-action" onClick={generateProduct}>
         Generate a product
@@ -235,6 +237,7 @@ export default function Index() {
         </s-unordered-list>
       </s-section>
     </s-page>
+    </>
   );
 }
 
