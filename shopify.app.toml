@@ -1,7 +1,7 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-client_id = "b781fdb1ab4fc9316181558224470de2"
-name = "mywork_app"
+client_id = "c51634fd1a4a4b7d05033288d3b8969c"   # <-- epay_app client ID
+name = "epay_app"                               # <-- optional but clearer
 application_url = "https://mywork-app.fly.dev"
 embedded = true
 
@@ -20,12 +20,11 @@ api_version = "2026-01"
   uri = "/webhooks/app/scopes_update"
 
 [access_scopes]
-# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
 scopes = "write_products"
 
 [auth]
 redirect_urls = [
   "https://mywork-app.fly.dev/auth/callback",
-  "https://mywork-app.fly.dev/auth/shopify/callback",
-  "https://mywork-app.fly.dev/api/auth/callback"
+  "https://mywork-app.fly.dev/api/auth/callback",
+  "https://mywork-app.fly.dev/auth/shopify/callback"
 ]
