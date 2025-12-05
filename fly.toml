@@ -1,0 +1,38 @@
+# fly.toml app configuration file generated for mywork-app on 2025-12-05T16:08:41+05:30
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'mywork-app'
+primary_region = 'bom'
+
+[build]
+
+[env]
+  PORT = '3000'
+  SCOPES = 'write_products'
+  SHOPIFY_API_KEY = 'b781fdb1ab4fc9316181558224470de2'
+  SHOPIFY_APP_URL = 'https://mywork-app.fly.dev'
+
+[processes]
+  app = 'node ./dbsetup.js npm run docker-start'
+
+[[mounts]]
+  source = 'data'
+  destination = '/data'
+  auto_extend_size_threshold = 80
+  auto_extend_size_increment = '1GB'
+  auto_extend_size_limit = '10GB'
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1

@@ -2,7 +2,7 @@
 
 client_id = "b781fdb1ab4fc9316181558224470de2"
 name = "mywork_app"
-application_url = "https://example.com"
+application_url = "https://mywork-app.fly.dev"
 embedded = true
 
 [build]
@@ -24,4 +24,8 @@ api_version = "2026-01"
 scopes = "write_products"
 
 [auth]
-redirect_urls = [ "https://example.com/api/auth" ]
+redirect_urls = [
+  "https://mywork-app.fly.dev/auth/callback",
+  "https://mywork-app.fly.dev/auth/shopify/callback",
+  "https://mywork-app.fly.dev/api/auth/callback"
+]
