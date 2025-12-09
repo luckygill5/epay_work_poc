@@ -1,6 +1,6 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-client_id = "c51634fd1a4a4b7d05033288d3b8969c"   # <-- epay_app client ID
+client_id = "e1a3d0c77c5a4c66724b8be6ab6c6d2a"   # <-- epay_app client ID
 name = "epay_app"                               # <-- optional but clearer
 application_url = "https://mywork-app.fly.dev"
 embedded = true
